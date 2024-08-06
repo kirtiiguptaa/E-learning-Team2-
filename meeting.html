@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Page | E-learning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #ebf5ff;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-header, .card-body {
+            background-color: #ffffff;
+        }
+
+        .card-header {
+            border-bottom: none;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #252641;
+        }
+
+        .card-body {
+            font-size: 16px;
+            color: #252641;
+            padding: 20px;
+        }
+
+        .accordion-button {
+            background-color: #ffffff;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #49bbbd;
+            background: none;
+            font-weight: 700;
+        }
+
+        .progress-bar {
+            background-color: #49BBBD;
+        }
+
+        .btn-light {
+            background-color: #fff;
+            border: none;
+        }
+
+        .btn-secondary {
+            background-color: #49BBBD;
+            border: none;
+        }
+
+        .btn-outline-secondary {
+            border-color: #49BBBD;
+            color: #49BBBD;
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: #49bbbde8;
+            color: #fff;
+        }
+
+        .video-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-section img {
+            width: 100%;
+            height: auto;
+        }
+
+        .participants {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .participants a {
+            display: block;
+        }
+
+        .participants img {
+            width: 120px;
+            height: auto;
+            border: 3px solid #ffffff;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        .course-contents ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .course-contents li {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+
+        .calender_section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .book-card {
+            width: 48%;
+        }
+
+        .book-card img {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .book-card .card-body {
+            padding: 10px;
+           
+        }
+
+        .book-card .card-text {
+            font-size: 14px;
+        }
+
+        h5, h2 {
+            font-size: 24px; 
+        }
+
+        .card-text {
+            font-size: 18px !important; 
+            font-weight: 500;
+        }
+
+        .text-primary {
+            font-size: 22px !important;
+            font-weight: 700;
+            color: #49BBBD !important;
+            text-align: center;
+        }
+        
+        .course-contents .card-body {
+            font-size: 20px; 
+        }
+
+        .course-contents .accordion-body {
+            font-size: 20px; 
+        }
+        #function-button {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px; 
+            width: 85%;
+            border-radius: 30px;
+            background-color: #E6F2FF;
+        }
+        .btn-primary {
+            background-color: #fff;
+            width: 60px;
+            height: 60px;
+            border: none;
+        }
+        .btn-primary i {
+            font-size: 26px;
+            font-weight: 900;
+        }
+        .btn-primary .icon-1 {
+            color: #EE645B;
+        }
+        .btn-primary .icon-2 {
+            color: #29B9E7;
+        }
+        .btn-primary .icon-3 {
+            color: #EE5B90;
+            transform: rotate(222deg);
+        }
+        .btn-primary .icon-4 {
+            color: #00CBB8;
+        }
+        .btn-primary .icon-5 {
+            color: #49BBBD;
+        }
+        .btn-primary:hover {
+            background-color: #fff;
+        }
+        .card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        .card-top i {
+            font-size: 25px;
+            color: #49BBBD;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) { 
+            .participants img {
+                width: 100px; 
+                height: 100px;
+            }
+            .participants a:last-child img {
+                display: none;
+            }
+            .d-flex.card-books {
+                flex-direction: column;
+            }
+            .book-card {
+                width: 100%; 
+                margin-bottom: 15px;
+            }
+
+            .book-card img {
+                height: auto; 
+            }
+
+            .card-title {
+                font-size: 20px; 
+            }
+
+            .card-text {
+                font-size: 16px; 
+            }
+            #function-button {
+                gap: 0;
+            }
+            .btn-primary {
+                width: 40px;
+                height: 40px;
+            }
+            .btn-primary i {
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid my-4">
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-12 col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <button class="btn btn-secondary" style="background-color: #fff;"><a href="index.html"><img src="assest/media/back.png" alt="Back"></a></button>
+                        <div>
+                            <h5 class="card-title mb-0">UX/UI Design Conference Meeting</h5>
+                            <small>9 Lesson 6h 30min</small>
+                        </div>
+                        <div class="ms-auto">
+                            <button class="btn btn-light"><img src="assest/media/setting.png" alt="Settings"></button>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="video-section">
+                            <img src="assest/media/teacher.png" alt="Conference" class="img-fluid rounded-top">
+                            <div class="participants">
+                                <a href="#"><img src="assest/media/s1.png" alt="Participant"></a>
+                                <a href="#"><img src="assest/media/s2.png" alt="Participant"></a>
+                                <a href="#"><img src="assest/media/s3.png" alt="Participant"></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3" id="function-button">
+                            <button class="btn btn-primary mx-1"><i class="icon-1 fa-solid fa-video"></i></button>
+                            <button class="btn btn-primary mx-1"><i class="icon-2 fa-solid fa-microphone"></i></button>
+                            <button class="btn btn-primary mx-1"><i class="icon-3 fa-solid fa-phone-flip"></i></button>
+                            <button class="btn btn-primary mx-1"><i class="icon-4 fa-solid fa-desktop"></i></button>
+                            <button class="btn btn-primary mx-1"><i class="icon-5 fa-solid fa-share-from-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-12 col-lg-4">
+                <!-- Course Contents Card -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="card-title">Course Contents</h5>
+                        </div>
+                        <div class="calender_section">
+                            <span>2/5 completed </span>
+                            <button class="btn btn-outline-secondary btn-sm"><img src="assest/media/calender.png" alt="Calendar"></button>
+                        </div>
+                        <div class="progress mb-3" style="height: 5px;">
+                            <div class="progress-bar" role="progressbar" style="width: 40%;"></div>
+                        </div>
+                        <div class="accordion" id="courseContents">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        Get Started
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <img src="assest/media/hour.png" alt="Hour">1 Hour <img src="assest/media/lesson.png" alt="Lesson"> 5 Lessons
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        Illustrator Structures
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li>1. Lorem ipsum dolor sit amet <span class="text-muted float-end">65:00</span></li>
+                                            <li>2. Lorem ipsum dolor sit amet <span class="text-muted float-end">25:00</span></li>
+                                            <li>3. Lorem ipsum dolor sit amet <span class="text-muted float-end">30:00</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                        Using Illustrator
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <img src="assest/media/hour.png" alt="Hour"> 1 Hour &nbsp; &nbsp; &nbsp; &nbsp; <img src="assest/media/lesson.png" alt="Lesson"> 4 Lessons
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                        What is Pandas?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        12:54 · 5 Lessons
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                        Work with Numpy
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        59:00 · 3 Lessons
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book For You Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-top">
+                            <h5 class="card-title">Book for you</h5>
+                            <i class="fa-regular fa-calendar"></i>
+                        </div>
+                        <div class="d-flex card-books">
+                            <a href="#" class="book-card me-2">
+                                <img src="assest/media/book1.png" class="card-img-top" alt="Book 1">
+                                <div class="card-body p-2">
+                                    <p class="card-text mb-0">All Benefits of PLUS</p>
+                                    <p class="card-text text-primary">$24</p>
+                                </div>
+                            </a>
+                            <a href="#" class="book-card">
+                                <img src="assest/media/book2.png" class="card-img-top" alt="Book 2">
+                                <div class="card-body p-2">
+                                    <p class="card-text mb-0">All Benefits of PLUS</p>
+                                    <p class="card-text text-primary">$24</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

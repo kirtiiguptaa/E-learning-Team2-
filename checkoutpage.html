@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page | E-learning</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=League+Spartan&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+        * {
+            overflow-x: visible !important;
+        }
+        body {
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0; 
+            overflow-x: hidden;
+            font-family: "Poppins", sans-serif; 
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            line-height: normal;
+        }
+        .container {
+            max-width: 100%;
+            padding: 0 15px;
+        }
+      .btn-confirm{
+        background-color: #49BBBD !important;
+      }
+        .card {
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; 
+           
+        }
+
+        #summary-card {
+            background-color: #ebf5ff; 
+            padding: 20px;            
+            border-radius: 5px;      
+        }
+
+        .summary-card ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none; 
+        }
+
+        .summary-card li {
+            background-color: #ebf5ff; 
+            border: none; 
+            font-size: 18px; /* Font size */
+            font-weight: 400; /* Font weight */
+            line-height: 32.4px; /* Line height */
+            letter-spacing: 0.02em; /* Letter spacing */
+            padding: 10px 0; /* Padding for spacing */
+            border-bottom: 0.5px solid #5B5B5B; /* Bottom border to distinguish items */
+        }
+
+        .summary-card li:last-child {
+            border-bottom: none; /* Remove the border from the last item */
+        }
+
+        .summary-card li + li {
+            margin-top: 0.5rem; 
+        }
+
+        .card img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .card-body .badge {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .card-body h5 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .card-body p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .summary-card p {
+            margin: 0;
+            font-size: 18px; /* Font size */
+            font-weight: 400; /* Font weight */
+            line-height: 32.4px; /* Line height */
+            letter-spacing: 0.02em; /* Letter spacing */
+        }
+
+        .summary-card hr {
+            margin: 1rem 0;
+        }
+
+        /* Checkout Form Styles */
+        .checkout-form h2,
+        .summary-card h2 {
+            font-size: 26px;
+            font-weight: 600;
+        } 
+        .checkout-form label, 
+        .checkout-form .form-control, 
+        .checkout-form .form-check-label {
+            font-size: 14px; 
+            text-align: left; 
+        }
+        .checkout-form label,
+        .checkout-form .form-check-label {
+            font-weight: 600;
+        }
+
+        .checkout-form .form-check-input {
+            margin-right: 10px; 
+        }
+
+        /* Card Type Section Styles */
+        .card-type-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px; 
+            justify-content: center; 
+        }
+
+        .card-type-images img {
+            max-width: 100%; 
+            height: auto; 
+            flex: 1 1 auto; 
+        }
+
+        /* Styles for offer section */
+        .offer-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .offer-card .card-body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.1);
+            color: #fff;
+            padding: 20px;
+        }
+
+        .offer-card .badge {
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 40px;
+            margin-bottom: 1rem;
+            background: #49BBBD;
+        }
+
+        .offer-card .card-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .offer-card .card-text {
+            font-size: 14px;
+            font-weight: 400;
+            width: 80%;
+            color: #fff;
+            opacity: 0.9;
+            line-height: 2rem;
+        }
+
+        /* Confirm Button Styling */
+        .btn-confirm {
+            width: 100%; 
+            padding: 12px 0;
+            border-radius: 10px; 
+            background-color: #49BBBD;
+            font-size: 20px;
+            border: 2px solid #49BBBD;
+        }
+        .btn-confirm:hover {
+            color: #49BBBD;
+            background-color: transparent;
+            border: 2px solid #49BBBD;
+        }
+
+        @media (max-width: 1199px) {
+            .offer-card .badge {
+                padding: 20px;
+            }
+            .offer-card .card-text {
+                width: 100%;
+                line-height: normal;
+            }
+            .offer-card .card-title {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .card img {
+                border-radius: 0;
+            }
+
+            .card {
+                margin-bottom: 20px;
+            }
+
+            .card-type-images {
+                flex-direction: column; 
+                align-items: center; 
+            }
+
+            .card-type-images img {
+                width: 80%; 
+                max-width: 200px; 
+            }
+        }
+    </style>
+
+<link
+rel="stylesheet"
+href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+/>
+</head>
+<body>
+
+    <header class="other-header">
+        <div class="logo">
+           <div class="head-icon">
+            <i class="fa-thin fa-square"></i>
+           </div>
+          <h4>TOTC</h4>
+        </div>
+        <div class="h-link">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="literature.html">Literature</a></li>
+                <li>
+                  <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Others
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="search.html">Search</a></li>
+                      <li><a class="dropdown-item" href="meeting.html">Meeting</a></li>
+                      <li><a class="dropdown-item" href="course-detail.html">Course Details</a></li>
+
+                      <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                      <li><a class="dropdown-item" href="checkoutpage.html">Checkout</a></li>
+                      <li><a class="dropdown-item" href="course-cal-create-01.html">Calendar 01</a></li>
+
+                      <li><a class="dropdown-item" href="Course-Calendar-Create2.html">Calendar 02</a></li>
+                      <li><a class="dropdown-item" href="course-calendar.html">Course Calendar</a></li>
+                      <li><a class="dropdown-item" href="Course-Full -View.html">Full View Calendar</a></li>
+                   
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                    <div class="header-user">
+                        <div>
+                            <img src="assest/media/image 12.png" alt="user" >
+                        </div>
+                        <div>
+                            <p> Lina <i class=" fa-regular fa-angle-down" style="color: #161718;"></i></p>
+                        </div>
+                    </div>
+                </li>
+               
+            </ul>
+
+           
+      <i class="fa-regular fa-bars-staggered" style="color: #ffffff;" id="menu-btn"></i>
+        </div>
+    </header>
+
+          <!-- mobile menu bar -->
+<div id="mob-menu">
+<div class="icon">
+  <i class=" fa-light fa-circle-xmark" id="close-btn"></i>
+  
+</div>
+
+ <div class="link-sec">
+ 
+    <ul>
+
+      <li><a href="index.html">Home</a></li>
+     
+      <li><a href="course.html">Courses</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="literature.html">Literature</a></li>
+         
+                <li><a class="" href="search.html">Search</a></li>
+                <li><a class="" href="meeting.html">Meeting</a></li>
+                <li><a class="" href="course-detail.html">Course Details</a></li>
+
+                <li><a class="" href="blog-details.html">Blog Details</a></li>
+                <li><a class="" href="checkoutpage.html">Checkout</a></li>
+                <li><a class="" href="course-cal-create-01.html">Calendar 01</a></li>
+
+                <li><a class="" href="Course-Calendar-Create2.html">Calendar 02</a></li>
+                <li><a class="" href="course-calendar.html">Course Calendar</a></li>
+                <li><a class="" href="Course-Full -View.html">Full View Calendar</a></li>
+                <li class="btn-head-l"><a href="log-res.html">Login</a></li>
+                <li class="btn-head-s"><a href="log-res.html">Sign Up</a></li>
+    </ul>
+
+ </div>
+</div>
+
+    <main class="container my-5">
+        <div class="row">
+            <!-- Checkout Form -->
+            <div class="col-lg-7 col-12">
+                <div class="card p-4 checkout-form">
+                    <h2>Checkout</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="cardType" class="form-label">Card Type</label>
+                            <div class="card-type-images">
+                                <img src="assest/media/paypal.png" alt="PayPal">
+                                <img src="assest/media/amex.png" alt="American Express">
+                                <img src="assest/media/visa.png" alt="Visa">
+                                <img src="assest/media/mastercard.png" alt="MasterCard">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nameOnCard" class="form-label">Name on Card</label>
+                            <input type="text" class="form-control" id="nameOnCard" placeholder="Enter name on Card">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="Enter Card Number">
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="expiryDate" class="form-label">Expiration Date (MM/YY)</label>
+                                <input type="text" class="form-control" id="expiryDate" placeholder="Enter Expiration Date">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cvc" class="form-label">CVC</label>
+                                <input type="text" class="form-control" id="cvc" placeholder="Enter CVC">
+                            </div>
+                        </div>
+                        <div class="form-check my-3">
+                            <input type="checkbox" class="form-check-input" id="saveInfo">
+                            <label class="form-check-label" for="saveInfo">Save my information for faster checkout</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-confirm">Confirm Payment</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Summary -->
+            <div class="col-lg-5 col-12">
+                <div class="card p-4 summary-card" id="summary-card">
+                    <h2>Summary</h2>
+                    <div class="d-flex justify-content-between">
+                        <img src="assest/media//confident-teacher-explaining-lesson-pupils 1.png" alt="Product 1" class="img-fluid" >
+                        <div class="ms-3 flex-grow-1">
+                            <p class="mb-1">adipiscing elit, sed do eiusmod tempor</p>
+                            <p class="fw-bold mb-0">$24.69</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <img src="assest/media//confident-teacher-explaining-lesson-pupils 2.png" alt="Product 2" class="img-fluid">
+                        <div class="ms-3 flex-grow-1">
+                            <p class="mb-1">sed do eiusmod tempor adipiscing elit</p>
+                            <p class="fw-bold mb-0">$24.69</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Subtotal</span>
+                            <strong>$51.38</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Coupon Discount</span>
+                            <strong>0%</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>TAX</span>
+                            <strong>$5</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total</span>
+                            <strong>$56.38</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Offers Section -->
+       <!-- Offers Section -->
+<div class="my-5">
+    <h2 class="text-center mb-4">Top Education offers and deals are listed here</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card offer-card">
+                <a href="https://example.com/offer1" target="_blank">
+                    <img src="assest/media/img50.png" class="card-img-top" alt="Offer 1">
+                </a>
+                <div class="card-body">
+                    <span class="badge">50%</span>
+                    <h5 class="card-title">Lorem ipsum dolor</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card offer-card">
+                <a href="https://example.com/offer2" target="_blank">
+                    <img src="assest/media/img10.png" class="card-img-top" alt="Offer 2">
+                </a>
+                <div class="card-body">
+                    <span class="badge">10%</span>
+                    <h5 class="card-title">Lorem ipsum dolor</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card offer-card">
+                <a href="https://example.com/offer3" target="_blank">
+                    <img src="assest/media/img50last.png" class="card-img-top" alt="Offer 3">
+                </a>
+                <div class="card-body">
+                    <span class="badge">50%</span>
+                    <h5 class="card-title">Lorem ipsum dolor</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+           <!-- footer sec -->
+
+           <footer>
+            <div class="footer-inner">
+               <div class="f-logo-sec">
+                   <div class="f-logo">
+                      <div class="f-box">
+                       <i class="fa-thin fa-square"></i>
+                      </div>
+                      <h4>TOTC</h4>
+                   </div>
+                   <div class="line">
+                     <!-- <i class="fa-solid fa-slash"></i> -->
+                   </div>
+                   <div>
+                     <p>Virtual Class <br> for Zoom</p>
+                   </div>
+               </div>
+   
+               <div>
+                <h5> Subscribe to get our Newsletter</h5>
+               </div>
+   
+               <div class="f-input">
+                 <div class="in">
+                   <input type="text" placeholder="Your Email">
+                 </div>
+                 <div>
+                   <button>Subscribe</button>
+                 </div>
+                
+               </div>
+               <div>
+                 <span>Careers |</span>
+                 <span>Privacy Policy |</span>
+                 <span>Terms & Conditions</span>
+   
+               </div>
+               <div>
+                 <h6>© 2021 Class Technologies Inc. </h6>
+               </div>
+            </div>
+          </footer>
+   
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+          <script src="header.js"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,906 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=League+Spartan&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif !important;
+}
+a {
+    text-decoration: none !important;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+/* Welcome */
+section {
+    position: relative;
+    padding: 20px 20px 50px;
+}
+
+section.welcome,
+section.recommended {
+    background: #ebf5ff;
+}
+
+.welcome-top,
+.recommended-top,
+.choice-top,
+.deals-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 5rem 0;
+}
+
+.welcome-top h2,
+.recommended-top h2,
+.choice-top h2,
+.deals-top h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #252641;
+}
+
+.welcome-top h6,
+.recommended-top h6,
+.choice-top h6,
+.deals-top h6 {
+    font-size: 1.1rem;
+    color: #49BBBD;
+    font-weight: 700;
+}
+
+.slider-btn{
+    position: absolute;
+    right: 1rem;
+    bottom: 0.5rem;
+}
+.slider-btn i {
+    background-color: #49BBBD80;
+    color: #fff;
+    padding: 0.9rem 1.1rem;
+    border-radius: 8px;
+    transition: all 300ms;
+    margin: 10px 3px;
+    cursor: pointer;
+}
+.slider-btn i:hover{
+    background-color: #49BBBD;
+    color: white;
+}
+.slider{
+    margin: 80px 0px;
+}
+.slick-prev , .slick-next
+{
+    display: none !important;
+}
+.slick-slide{
+    margin: 0px 10px;
+    width: 100%;
+}
+.container.slick-slider {
+    max-width: 1200px;
+}
+.card{
+    border: 2px solid #fff !important;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
+    transition: all 200ms;
+    width: 100%;
+}
+.card:hover {
+    transform: translateY(10px);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 0.4rem;
+}
+
+.card .review {
+    display: flex;
+    align-items: center;
+}
+
+.card .review img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    margin-right: 1rem;
+} 
+
+.card .review h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: #49BBBD !important;
+    border-radius: 5px;
+}
+
+.lesson-card p {
+    font-size: 0.9rem;
+    text-align: end;
+}
+
+/* Favourite */
+.favourite-courses {
+    padding: 30px 40px;
+}
+
+.favourite-courses h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #252641;
+    text-align: left;
+    padding-left: 1rem;
+    margin-bottom: 1.7rem;
+}
+
+.categories {
+    display: flex;
+    gap: 10px;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    transition: all 200ms;
+}
+.category-card:hover {
+    transform: translateY(-10px);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.category-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.category-card h3 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.category-card p {
+    font-size: 1.1rem;
+    color: #696984;
+}
+.category-card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+}
+.category-card .icon i {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+.icon.icon1,
+.icon.icon4,
+.icon.icon8 {
+    background-color: #49BBBD4D;
+}
+.icon.icon2 {
+    background-color: #5B72EE4D;
+}
+.icon.icon3 {
+    background-color: #9DCCFF4D;
+}
+.icon.icon5 {
+    background-color: #F48C064D;
+}
+.icon.icon6 {
+    background-color: #EE645B4D;
+}
+.icon.icon7 {
+    background-color: #2526414D;
+}
+.icon.icon1 i,
+.icon.icon4 i,
+.icon.icon8 i {
+    color: #49BBBD;
+}
+.icon.icon2 i {
+    color: #5B72EE;
+}
+.icon.icon3 i {
+    color: #9DCCFF;
+}
+.icon.icon5 i {
+    color: #F48C06;
+}
+.icon.icon6 i {
+    color: #EE645B;
+}
+.icon.icon7 i {
+    color: #252641;
+}
+
+/* Recommended */
+.recommended-card img,
+.choice-card img {
+    border-radius: 20px;
+}
+.design-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem 0.2rem;
+}
+.design-time i {
+    color: #D9D9D9;
+    margin-right: 0.5rem;
+}
+.design-time {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #696984;
+}
+.recommended-card p,
+.choice-card p {
+    font-size: 18px;
+    color: #696984;
+    text-align: left;
+}
+.recommended-card .review,
+.choice-card .review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.person-review,
+.course-price  {
+    display: flex;
+    align-items: center;
+}
+.course-price {
+    gap: 0.5rem;
+}
+.course-price p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #49BBBD;
+    margin-bottom: 0;
+}
+.course-price p:first-child {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: #000;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+.recommended-card .review p {
+    margin-bottom: 0;
+}
+
+/* Choice */
+.choice {
+    display: flex;
+    flex-direction: column;
+}
+.choice-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 10px;
+}
+.choice-top {
+    margin: 0;
+    padding: 10px;
+}
+.choice-card.card {
+    flex: 1 1 20%;
+    box-sizing: border-box;
+}
+.choice-card.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Coaching */
+.coaching {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #252641;
+    color: #fff;
+    margin: 40px auto;
+    border-radius: 37px;
+    padding: 30px;
+}
+.coaching-head {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: 80%;
+}
+.coaching p {
+    font-size: 18px;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+.coaching button {
+    padding: 12px 16px;
+    border-radius: 12px;
+    background-color: #49BBBD;
+    border: 2px solid #49BBBD;
+    outline: none;
+}
+.coaching button a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+.coaching button:hover {
+    background-color: transparent;
+}
+.coaching button:hover a {
+    color: #49BBBD;
+}
+
+.choice3 {
+    background-color: #EBF5FF;
+}
+
+
+
+/* Course details */
+#course-d-top-bg{
+    height: 60vh;
+    background: linear-gradient(rgba(8, 8, 8, 0.5), rgba(0, 0, 0, 0.409)), url(assest/media/course-detail.jfif);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.first-sec {
+   padding: 20px;
+   
+}
+.second-sec{
+    margin-top: -12rem;
+}
+.course-info {
+    padding: 20px;
+    /* max-width: 400px; */
+    
+    /* margin-top: -16.5rem; */
+    background-color: #fff;
+    z-index: 99;
+    border-radius: 10px;
+}
+.course-info img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.course-details .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.current-price {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+}
+
+.original-price {
+    font-size: 28px;
+    font-weight: 600;
+    text-decoration: line-through;
+    color: #000;
+    opacity: 0.5;
+}
+
+.discount {
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    opacity: 0.5;
+}
+
+.time-left {
+    font-size: 20px;
+    font-weight: 600;
+    color: #49BBBD;
+    margin-bottom: 1.5rem;
+}
+
+.buy-now {
+    background-color: #49BBBD;
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding: 14px 30px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid #49BBBD;
+}
+
+.buy-now:hover {
+    color: #49BBBD;
+    background-color: transparent;
+}
+
+.course-details h3 {
+    margin-top: 0;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.course-includes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-includes li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    opacity: 0.7;
+}
+.course-includes li i {
+    font-size: 20px;
+    font-weight: 900;
+    color: #49BBBD;
+    margin-right: 0.7rem;
+}
+.course-training p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #696984;
+}
+
+.share-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.share-icons i {
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    background-color: #696984;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.share-icons i:nth-child(3) {
+    background-color: #FF0000;
+}
+
+
+/* Overview */
+
+.overview-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}
+.overview-btns button {
+    background-color: #e5e5e5;
+    border: none;
+    margin: 0px 10px;
+    outline: none;
+    padding: 10px 18px;
+    width: 160px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.5;
+}
+.overview-btns button:last-child {
+    background-color: #49BBBD;
+    color: #fff;
+    opacity: 1;
+}
+.overview-container {
+    background-color: #ebf5ff;
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+}
+.overview .reviews {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.overview .review-container {
+    background-color: #fff;
+    padding: 20px 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.review-container .numbers {
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+.stars i {
+    color: #FDB022;
+}
+.review-text {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.5;
+    margin-top: 1rem;
+}
+.reviews-progress {
+    flex: 1;
+}
+.reviews-progress .star-progress {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+.star-number {
+    font-size: 20px;
+    color: #000;
+    opacity: 0.5;
+    margin-right: 2rem;
+    width: 25%;
+}
+.reviews-progress .progress-container {
+    width: 90%;
+}
+.overview-content {
+    margin: 40px 20px;
+}
+.person-review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+.person-details {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.person-details img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    margin-right: 1rem;
+}
+.person-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+.person-star i {
+    color: #FDB022;
+} 
+.person-review .time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-weight: 500;
+    color: #696984;
+}
+.person-review .time i {
+    color: #D9D9D9;
+    font-size: 24px;
+}
+.review-para {
+    font-size: 18px;
+    text-align: left;
+    color: #696984;
+}
+
+/* Deals */
+.deals-top {
+    margin: 1rem 2rem;
+}
+.deals-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.deal-card {
+    position: relative;
+    background:linear-gradient(rgba(8, 8, 8, 0.5), rgba(0, 0, 0, 0.409)) , url(assest/media/deal.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.deal-card .deal-offer {
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #FF000099;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.deal-card .deal-head {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.deal-card .deal-details {
+    font-size: 18px;
+    color: #fff;
+    width: 70%;
+}
+
+@media(max-width:992px)
+{
+    .second-sec{
+        margin-top: 40px;
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+     
+       gap: 20px;
+    }
+    .course-details h3{
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 950px) {
+    .welcome-top,
+    .recommended-top {
+        margin: 1rem 2rem;
+    }
+    .category-card {
+        width: 48%;
+    }
+    .choice-card.card {
+        flex: 1 1 40%;
+    }
+    .deals-container {
+        flex-direction: column;
+    }
+    .deal-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome {
+        padding-bottom: 60px;
+    }
+    .welcome-top h2 ,
+    .recommended-top h2{
+        font-size: 1.6rem;
+    }
+    .favourite-courses h1 {
+        padding-left: 0;
+        font-size: 1.4rem;
+    }
+    .coaching {
+        padding: 20px;
+        margin: 30px auto;
+    }
+    .second-sec{
+        margin-top: 40px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+     
+       gap: 20px;
+    }
+    .course-details h3{
+        margin-top: 30px;
+    }
+    .choice-top {
+        justify-content: space-between;
+    }
+    .welcome-top h6, .recommended-top h6, .choice-top h6 {
+        width: 25%;
+    }
+    .coaching-head {
+        font-size: 28px;
+        width: 95%;
+    }
+    .coaching p {
+        font-size: 20px;
+        width: 95%;
+        margin-bottom: 2rem;
+    }
+    .deals-top {
+        margin: 1rem 0;
+    }
+}
+@media(max-width:680px)
+{
+    .overview .reviews {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .overview .review-container {
+        width: 100%;
+    }
+    .reviews-progress{
+        width: 100%;
+    }
+    .overview-btns button{
+        width: fit-content;
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
+@media (max-width: 600px) {
+    section {
+        padding: 30px 10px 60px;
+    }
+    .welcome-top,
+    .recommended-top {
+        margin: 1rem;
+    }
+    .choice-container {
+        flex-direction: column;
+    }
+    .category-card {
+        width: 100%;
+    }
+    .choice-card.card {
+        flex: 1 1 100%;
+    }
+}
+
+@media(max-width:534px)
+{
+    .overview-btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 0rem auto 2rem auto;
+    }
+    .overview-container {
+      padding: 10px 20px} 
+    .overview-btns button{
+        flex:  0 0 120px;
+        margin: 10px 0;
+    }
+    .star-number {
+        font-size: 20px;
+        color: #000;
+        opacity: 0.5;
+        margin-right: 2rem;
+        width: 34%;
+    }
+    .review-para{
+        font-size: 16px;
+    }
+    .star-number{
+        font-size: 16px;
+    }
+    .discount , .original-price , .current-price{
+        font-size: 19px;
+    }
+}
+
+@media (max-width:425px)
+{
+    .person-details img {
+        width: 60px;
+        height: 60px;
+        
+    }
+    .person-name {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:418px)
+{
+    .person-review {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin: 1rem 0;
+    }
+    .person-review .time{
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | E-learning</title>
+    <link rel="stylesheet" href="log-res.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <!-- <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon"> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    />
+  </head>
+
+  <body>
+      <div id="log-res-sec">
+       <div class="row">
+        <div class="col-md-6 col-12 mob-hide">
+              <div class="log-inner">
+                <img src="assest/media/log-bg.jpeg" alt="" class="img-fluid" id="form-img">
+              </div>
+        </div>
+        <div class="col-md-6 col-12">
+            <div class="wrapper">
+                <div class="title-text">
+                  <p>Welcome to lorem..!</p>
+                </div>
+                <div class="form-container">
+                  <div class="slide-controls">
+                    <input type="radio" name="slide" id="login" checked>
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="slide login">Login</label>
+                    <label for="signup" class="slide signup">Register</label>
+                    <div class="slider-tab"></div>
+                  </div>
+
+                  <p class="form-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  <div class="form-inner">
+                    <form action="#" class="login">
+                      <div class="field">
+                        <input type="text" placeholder="Email Address" required>
+                      </div>
+                      <div class="field">
+                        <input type="password" placeholder="Password" required>
+                      </div>
+                      <div class="pass-link">
+                        <div>
+                            <input type="checkbox"> <label for="">Reminder</label>
+                        </div>
+                        <div>
+                          <a href="#">Forgot password?</a>
+                        </div>
+                      </div>
+                      <div class="field btn">
+                         <button>Login</button>
+                      </div>
+                      
+                    </form>
+                    <form action="#" class="signup">
+                      <div class="field">
+                        <input type="text" placeholder="Email Address" required>
+                      </div>
+                      <div class="field">
+                        <input type="password" placeholder="Password" required>
+                      </div>
+                      <div class="field">
+                        <input type="password" placeholder="Confirm password" required>
+                      </div>
+                      <div class="field btn">
+                         <button>Register</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </div>
+       </div>
+      </div>
+
+      <script>
+        const loginText = document.querySelector(".title-text .login");
+const loginForm = document.querySelector("form.login");
+const loginBtn = document.querySelector("label.login");
+const signupBtn = document.querySelector("label.signup");
+const signupLink = document.querySelector("form .signup-link a");
+let imgName = document.getElementById("form-img");
+signupBtn.onclick = (()=>{
+  loginForm.style.marginLeft = "-50%";
+  imgName.src="assest/media/res-bg.jpeg";
+  loginText.style.marginLeft = "-50%";
+});
+loginBtn.onclick = (()=>{
+  loginForm.style.marginLeft = "0%";
+  imgName.src="assest/media/log-bg.jpeg";
+
+  loginText.style.marginLeft = "0%";
+
+});
+signupLink.onclick = (()=>{
+  signupBtn.click();
+  return false;
+});
+      </script>
+  </body>
+  </html>

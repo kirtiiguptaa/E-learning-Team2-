@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTC</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+  />
+
+  <style>
+    header .dropdown {
+        display: none;
+    }
+  </style>
+</head>
+
+
+<body>
+
+    <header class="other-header">
+        <div class="logo">
+           <div class="head-icon">
+            <i class="fa-thin fa-square"></i>
+           </div>
+          <h4>TOTC</h4>
+        </div>
+        <div class="h-link">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="literature.html">Literature</a></li>
+                <li>
+                  <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Others
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="search.html">Search</a></li>
+                      <li><a class="dropdown-item" href="meeting.html">Meeting</a></li>
+                      <li><a class="dropdown-item" href="course-detail.html">Course Details</a></li>
+
+                      <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                      <li><a class="dropdown-item" href="checkoutpage.html">Checkout</a></li>
+                      <li><a class="dropdown-item" href="course-cal-create-01.html">Calendar 01</a></li>
+
+                      <li><a class="dropdown-item" href="Course-Calendar-Create2.html">Calendar 02</a></li>
+                      <li><a class="dropdown-item" href="course-calendar.html">Course Calendar</a></li>
+                      <li><a class="dropdown-item" href="Course-Full -View.html">Full View Calendar</a></li>
+                   
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                    <div class="header-user">
+                        <div>
+                            <img src="assest/media/image 12.png" alt="user" >
+                        </div>
+                        <div>
+                            <p> Lina <i class=" fa-regular fa-angle-down" style="color: #161718;"></i></p>
+                        </div>
+                    </div>
+                </li>
+               
+            </ul>
+
+           
+      <i class="fa-regular fa-bars-staggered" style="color: #ffffff;" id="menu-btn"></i>
+        </div>
+    </header>
+
+          <!-- mobile menu bar -->
+<div id="mob-menu">
+<div class="icon">
+  <i class=" fa-light fa-circle-xmark" id="close-btn"></i>
+  
+</div>
+
+ <div class="link-sec">
+ 
+    <ul>
+
+      <li><a href="index.html">Home</a></li>
+     
+      <li><a href="course.html">Courses</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="literature.html">Literature</a></li>
+         
+                <li><a class="" href="search.html">Search</a></li>
+                <li><a class="" href="meeting.html">Meeting</a></li>
+                <li><a class="" href="course-detail.html">Course Details</a></li>
+
+                <li><a class="" href="blog-details.html">Blog Details</a></li>
+                <li><a class="" href="checkoutpage.html">Checkout</a></li>
+                <li><a class="" href="course-cal-create-01.html">Calendar 01</a></li>
+
+                <li><a class="" href="Course-Calendar-Create2.html">Calendar 02</a></li>
+                <li><a class="" href="course-calendar.html">Course Calendar</a></li>
+                <li><a class="" href="Course-Full -View.html">Full View Calendar</a></li>
+                <li class="btn-head-l"><a href="log-res.html">Login</a></li>
+                <li class="btn-head-s"><a href="log-res.html">Sign Up</a></li>
+    </ul>
+
+ </div>
+</div>
+    <!-- search bar -->
+    <section class="search">
+        <img src="assest/media/Rectangle 180.png" alt="">
+        <div class="search-btns">
+            <div class="search-input">
+                <input type="text" placeholder="Search your favourite course" oninput="return showIcon()" autocomplete="off" id="input">
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="buttons">
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Subjects  </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/" class="dropdown-item">Subjects</a></li>
+                        <li><a href="/" class="dropdown-item">Partner</a></li>
+                        <li><a href="/" class="dropdown-item">Program</a></li>
+                        <li><a href="/" class="dropdown-item">Language</a></li>
+                        <li><a href="/" class="dropdown-item">Abalibility</a></li>
+                        <li><a href="/" class="dropdown-item">Learning Type</a></li>
+                    </ul>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Partner  </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/" class="dropdown-item">Subjects</a></li>
+                        <li><a href="/" class="dropdown-item">Partner</a></li>
+                        <li><a href="/" class="dropdown-item">Program</a></li>
+                        <li><a href="/" class="dropdown-item">Language</a></li>
+                        <li><a href="/" class="dropdown-item">Abalibility</a></li>
+                        <li><a href="/" class="dropdown-item">Learning Type</a></li>
+                    </ul>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Program  </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/" class="dropdown-item">Subjects</a></li>
+                        <li><a href="/" class="dropdown-item">Partner</a></li>
+                        <li><a href="/" class="dropdown-item">Program</a></li>
+                        <li><a href="/" class="dropdown-item">Language</a></li>
+                        <li><a href="/" class="dropdown-item">Abalibility</a></li>
+                        <li><a href="/" class="dropdown-item">Learning Type</a></li>
+                    </ul>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Language  </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/" class="dropdown-item">Subjects</a></li>
+                        <li><a href="/" class="dropdown-item">Partner</a></li>
+                        <li><a href="/" class="dropdown-item">Program</a></li>
+                        <li><a href="/" class="dropdown-item">Language</a></li>
+                        <li><a href="/" class="dropdown-item">Abalibility</a></li>
+                        <li><a href="/" class="dropdown-item">Learning Type</a></li>
+                    </ul>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Abalibility  </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/" class="dropdown-item">Subjects</a></li>
+                        <li><a href="/" class="dropdown-item">Partner</a></li>
+                        <li><a href="/" class="dropdown-item">Program</a></li>
+                        <li><a href="/" class="dropdown-item">Language</a></li>
+                        <li><a href="/" class="dropdown-item">Abalibility</a></li>
+                        <li><a href="/" class="dropdown-item">Learning Type</a></li>
+                    </ul>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Learning Type  </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/" class="dropdown-item">Subjects</a></li>
+                        <li><a href="/" class="dropdown-item">Partner</a></li>
+                        <li><a href="/" class="dropdown-item">Program</a></li>
+                        <li><a href="/" class="dropdown-item">Language</a></li>
+                        <li><a href="/" class="dropdown-item">Abalibility</a></li>
+                        <li><a href="/" class="dropdown-item">Learning Type</a></li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+        </div>
+
+    </section>
+
+    <section class="cards-container">
+        <div class="cards">
+            <div class="card">
+                <img class="card-image" src="assest/media/course-card.png" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assest/media/Rectangle 32.jfif" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assest/media/Rectangle 32 (1).png" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assest/media/Rectangle 32 (2).png" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="cards2">
+            <div class="card">
+                <img src="assest/media/Rectangle 32 (3).png" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assest/media/Rectangle 32 (4).png" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assest/media/Rectangle 32 (5).png" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assest/media/Rectangle 32 (6).png" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+    <!-- Know about learning learning platform -->
+    <section class="call">
+        <div class="call-container">
+            <div class="call-left">
+                <h1 class="call-title">Know about learning <br>learning platform</h1>
+                <p class="call-info"><span><img src="assest/media/BG.png" alt=""></span>&nbsp;&nbsp;&nbsp;Free E-book, video & consolation</p>
+                <p class="call-info"><span><img src="assest/media/BG.png" alt=""></span>&nbsp;&nbsp;&nbsp;Top instructors from around world</p>
+                <p class="call-info"><span><img src="assest/media/BG.png" alt=""></span>&nbsp;&nbsp;&nbsp;Top courses from your team</p>
+                <div>
+                    <button class="btn">Start learning now</button>
+                </div>
+            </div>
+            
+                
+                <img class="right-img" src="assest/media/Group 71.png" alt="">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended for you-->
+    <section class="cards-container recomnd">
+        <div class="container-top">
+            <h1>Recommended for you</h1>
+            <p>See all</p>
+        </div>
+        <div class="cards mb">
+            <div class="card white">
+                <img class="card-image" src="assest/media/course-card.png" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card white">
+                <img src="assest/media/Rectangle 32.jfif" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card white">
+                <img src="assest/media/Rectangle 32 (1).png" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card white">
+                <img src="assest/media/Rectangle 32 (2).png" alt="">
+                <div class="month">
+                    <div class="cube">
+                        <img src="assest/media/cube.png" alt="">
+                        <p>Design</p>
+                    </div>
+                    <div class="clock">
+                        <img src="assest/media/clock.png" alt="">
+                        <p>3 Month</p>
+                    </div>
+                </div>
+                <h3 class="card-title">AWS Certified solutions Architect</h3>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum ea ipsam.</p>
+                <div class="card-price">
+                    <div class="price-img">
+                        <img class="image" src="assest/media/Group 234.png" alt="">
+                        <p class="img-name">Lina</p>
+                    </div>
+                    <div class="price-info">
+                        <p class="price">$80</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- Classes taught by real creators -->
+    <section class="class">
+        <div class="class-container"> 
+            <div class="container-top">
+                <h1>Classes taught by real creators</h1>
+                <p>See all</p>
+            </div>
+
+            <div class="class-cards">
+                
+                <div class="class-card">
+                    <div class="card-details">
+                        <h3 class="class-card-title">Jane Cooper</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur  adipisicing elit. Illo ipsum voluptatum</p>
+                    </div>
+
+                    <div class="class-card-img">
+                        <img src="assest/media/image 10 (3).png" alt="">
+                    </div>
+                </div>
+
+                <div class="class-card">
+                    <div class="card-details">
+                        <h3 class="class-card-title">Adam</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur  adipisicing elit. Illo ipsum voluptatum</p>
+                    </div>
+
+                    <div class="class-card-img">
+                        <img src="assest/media/image 10 (1).png" alt="">
+                    </div>
+                </div>
+
+                <div class="class-card">
+                    <div class="card-details">
+                        <h3 class="class-card-title">Tomara</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur  adipisicing elit. Illo ipsum voluptatum</p>
+                    </div>
+
+                    <div class="class-card-img">
+                        <img src="assest/media/image 10 (2).png" alt="">
+                    </div>
+                </div>
+
+                
+            
+            </div>
+
+            <div class="class-cards">
+                
+                <div class="class-card">
+                    <div class="card-details">
+                        <h3 class="class-card-title">Jane Cooper</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur  adipisicing elit. Illo ipsum voluptatum</p>
+                    </div>
+
+                    <div class="class-card-img">
+                        <img src="assest/media/image 10 (3).png" alt="">
+                    </div>
+                </div>
+
+                <div class="class-card">
+                    <div class="card-details">
+                        <h3 class="class-card-title">Jane Cooper</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur  adipisicing elit. Illo ipsum voluptatum</p>
+                    </div>
+                    <div class="class-card-img">
+                        <img src="assest/media/image 10 (3).png" alt="">
+                    </div>
+                </div>
+
+                <div class="class-card">
+                    <div class="card-details">
+                        <h3 class="class-card-title">Jane Cooper</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur  adipisicing elit. Illo ipsum voluptatum</p>
+                    </div>
+                    <div class="class-card-img">
+                        <img src="assest/media/image 10 (3).png" alt="">
+                    </div>
+                </div>
+
+                
+            
+            </div>
+            
+            
+
+            
+        </div>
+    </section>
+
+    <!-- What our students have to say -->
+    <section class="student">
+        <div class="container-top">
+            <h1>What our students have to say</h1>
+        </div>
+        <div class="student-container">
+            <div class="student-img">
+                <img src="assest/media/Ellipse 119.png" alt="">
+                <img src="assest/media/Ellipse 122.png" alt="">
+                <img src="assest/media/Ellipse 121.png" alt="">
+                <img src="assest/media/Ellipse 120.png" alt="">
+            </div>
+            <div class="student-detail">
+                <h3 class="student-name">Savannah Nguyen</h3>
+                <h4 class="student-mail">tanya.hill@Example.com</h4>
+                <p class="student-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Deserunt, corrupti.</p>
+                <p class="student-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Deserunt, corrupti.</p>
+                <p class="student-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Deserunt, corrupti.</p>
+                <div class="student-icon">
+                    <img src="assest/media/twitter.png" alt="">
+                    <img src="assest/media/facebook.png" alt="">
+                    <img src="assest/media/instagram.png" alt="">
+                </div>
+            </div>
+
+            <div class="student-imgs">
+                <img src="assest/media/Ellipse 123.png" alt="">
+                <img src="assest/media/Ellipse 124.png" alt="">
+                <img src="assest/media/Ellipse 125.png" alt="">
+                <img src="assest/media/Ellipse 126.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Education offers and deals are listed here -->
+    <section class="education">
+        <div class="education-container">
+            <div class="container-top">
+                <h1>Top Education offers and deals are listed here</h1>
+                <p>See all</p>
+            </div>
+            <div class="education-cards">
+                <div class="education-card">
+                    <img class="education-card-img" src="assest/media/Rectangle 187.png" alt="">
+                    <div class="education-card-body">
+                        <img src="assest/media/Rectangle 191.png" alt="">
+                        <h1 class="body-img-text">50%</h1>
+                        <div class="card-body-text">
+                            <h1>Lorem, ipsum dolor.</h1>
+                            <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. sed so <br> Laudantium</p>
+                            <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. sed so <br> Laudantium</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <img class="education-card-img" src="assest/media/Rectangle 188.png" alt="">
+                    <div class="education-card-body">
+                        <img src="assest/media/Rectangle 191.png" alt="">
+                        <h1 class="body-img-text">10%</h1>
+                        <div class="card-body-text">
+                            <h1>Lorem, ipsum dolor.</h1>
+                            <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. sed so <br> Laudantium</p>
+                            <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. sed so <br> Laudantium</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <img class="education-card-img" src="assest/media/Rectangle 189.png" alt="">
+                    <div class="education-card-body">
+                        <img src="assest/media/Rectangle 191.png" alt="">
+                        <h1 class="body-img-text">50%</h1>
+                        <div class="card-body-text">
+                            <h1>Lorem, ipsum dolor.</h1>
+                            <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. sed so <br> Laudantium</p>
+                            <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. sed so <br> Laudantium</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+           <!-- footer sec -->
+
+           <footer>
+            <div class="footer-inner">
+               <div class="f-logo-sec">
+                   <div class="f-logo">
+                      <div class="f-box">
+                       <i class="fa-thin fa-square"></i>
+                      </div>
+                      <h4>TOTC</h4>
+                   </div>
+                   <div class="line">
+                     <!-- <i class="fa-solid fa-slash"></i> -->
+                   </div>
+                   <div>
+                     <p>Virtual Class <br> for Zoom</p>
+                   </div>
+               </div>
+   
+               <div>
+                <h5> Subscribe to get our Newsletter</h5>
+               </div>
+   
+               <div class="f-input">
+                 <div class="in">
+                   <input type="text" placeholder="Your Email">
+                 </div>
+                 <div>
+                   <button>Subscribe</button>
+                 </div>
+                
+               </div>
+               <div>
+                 <span>Careers |</span>
+                 <span>Privacy Policy |</span>
+                 <span>Terms & Conditions</span>
+   
+               </div>
+               <div>
+                 <h6>© 2021 Class Technologies Inc. </h6>
+               </div>
+            </div>
+          </footer>
+
+          
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="header.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+<script src="main.js"></script>
+    
+</body>
+</html>

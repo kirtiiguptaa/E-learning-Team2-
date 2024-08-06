@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=League+Spartan&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a {
+    text-decoration: none !important;
+}
+
+
+.pricing-section {
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 1200px;
+    padding: 0.8rem 1.5rem;
+}
+
+.pricing-section h1 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #49BBBD;
+}
+
+.pricing-cards {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    overflow-y: hidden;
+}
+
+.pricing-cards .card {
+    width: 35%;
+}
+
+.pricing-cards .card, .cardbest {
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-cards .cardbest {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-cards .card h2, .cardbest h2 {
+    font-size: 1em;
+    color: #49BBBD;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.pricing-cards .card .price, .cardbest .price {
+    font-size: 1em;
+    color: #2D3436;
+    text-align: left;
+}
+
+.pricing-cards .card .currency, .cardbest .currency {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.pricing-cards .card .duration, .cardbest .duration {
+    color: #2D3436;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+.pricing-cards .card .features, .cardbest .fea, .card .fe {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.pricing-cards .card .features li, .cardbest .fea li, .card .fe li {
+    margin: 25px 0;
+    color: #000000;
+}
+
+.pricing-cards .card .features i, .cardbest .fea i, .card .fe i {
+    color: #bdc2c1;
+    margin-right: 10px;
+}
+
+.card .fe i {
+    color: #6ff3e8;
+}
+
+.cardbest .fea i {
+    color: #ecb44d;
+}
+
+.pricing-cards .card .btn, .cardbest .btnn {
+    background-color: #f8f5f5;
+    color: #49BBBD;
+    border: none;
+    padding: 15px 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    border: 1px solid #ADADAD;
+}
+
+.pricing-cards .card .btn:hover, .cardbest .btnn:hover {
+    background-color: #49BBBD;
+    color: #fffefe;
+}
+
+.cardbest .btnn {
+    background-color: #49BBBD;
+    color: #ffffff;
+}
+
+.cardbest .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.cardbest .best-label {
+    background-color: #ffffff;
+    color: #0f0f0f;
+    border: 1px solid #0a0a0a;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    margin-left: -50%;
+}
+
+.coaching-box {
+    background-color: #2b2d42; 
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 90%;
+    margin-top: 2rem;
+}
+
+.coaching-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.coaching-box p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.start-button {
+    background-color: #49BBBD; 
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2%;
+}
+
+.start-button:hover {
+    background-color: #49BBBD80;
+}
+
+.accordion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    font-weight: 500;
+    color: #2D3436;
+    width: 85%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight:700;
+    color: #333;
+}
+
+.accordion {
+    border-top: -1px solid #ddd;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #f5f5f5;
+}
+
+.accordion-header .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #55EFC4;
+    margin-right: 15px;
+}
+.accordion-header #tit {
+    flex-grow: 1; 
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-right: 10px; 
+    font-size: 18px;
+    font-weight: 400;
+    color: #2D3436;
+}
+
+
+.accordion-header i {
+    transition: transform 0.3s ease;
+    
+}
+
+.accordion-content {
+    padding:  40px 30px;
+    display: none;
+    font-size: 18px;
+}
+
+.accordion-content p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.6;
+    color: #696984;
+}
+
+.accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+
+/* Student Testimonials Section */
+.student-testimonials {
+    background-color: #ebf5ff;
+    padding: 4rem 1rem;
+    text-align: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.student-testimonials h2 {
+    font-size: 30px;
+    color: #2D3436;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.testimonial-slider {
+    border-radius: 1%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-slider-content {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    overflow-x: hidden;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+   
+    width: 280px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.testimonial-card img {
+    width: 70px;
+    height: 75px;
+    border-radius: 5%;
+
+    background-color: #bebebe;
+    display: block;
+    margin: 0px auto 30px auto;
+}
+
+.testimonial-card h3 {
+    font-size: 18px;
+    color: #2D3436;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    font-size: 14px;
+    color: #696984;
+}
+
+.slider-prev,
+.slider-next {
+    background-color: #9DCCFF;
+    color: #fff;
+    border: none;
+    padding: 7px 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+}
+.slider-prev i,
+.slider-next i{
+    margin-top: 4px;
+}
+.slider-prev:hover,
+.slider-next:hover {
+    background-color: #97e1ff;
+}
+
+.slider-prev {
+    left: 0px;
+}
+
+.slider-next {
+    right: 0px;
+}
+
+
+
+.app-download-section {
+    background-color: #252641; 
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    margin: 50px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+    
+}
+
+.app-download-section p {
+    color: white;
+    font-size: 18px; 
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+.android-btn i , .ios-btn i {
+    margin-right: 0.8rem !important;
+}
+
+.android-btn {
+    background-color: #29B9E7; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white !important;
+}
+
+.ios-btn {
+    background-color: #49BBBD; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white !important;
+}
+
+.btn img {
+    margin-right: 5px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.containerrr {
+    display: flex;
+    justify-content:space-evenly;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card10 {
+    width: 45%;
+    box-shadow: 0 14px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card10 img {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90%;
+    height: auto;
+}
+
+.infoo {
+    padding: 20px;
+}
+
+.infoo h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #252641;
+}
+
+.infoo p {
+    font-size: 16px;
+    color: #696984;
+    margin-bottom: 1rem;
+}
+
+.containerrr button {
+    margin-left: 56%;
+}
+
+#btnnnn{
+    background-color: #49BBBD;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .pricing-section {
+        width: 100%;
+    }
+    .pricing-cards {
+        flex-direction: column;
+    }
+    .pricing-cards .card {
+        width: 100%;
+    }
+    .app-download-section {
+        width: 100%;
+    }
+    .coaching-box {
+        width: 100%;
+    }
+    .student-testimonials h2 {
+        padding: 0 1rem;
+    }
+    .containerrr {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .card10 {
+        width: 100%;
+    }
+    .coaching-box p {
+        width: 80%;
+    }
+}
+@media (max-width:600px)
+{
+    .app-download-section {
+        background-color: #252641;
+        padding: 40px;
+        margin: 40px 20px 10px 20px;
+        text-align: center;
+        border-radius: 10px;
+        width: 90%;
+       
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .coaching-box {
+        width: 97%;
+    }
+}
+@media (max-width: 450px) {
+    .pricing-section h1 {
+        font-size: 2rem;
+    }
+    .containerrr button {
+        margin-left: 0;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+    .app-download-section {
+        gap: 10px;
+    }
+}

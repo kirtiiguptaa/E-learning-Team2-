@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=League+Spartan&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* General Styles */
+.container-fluid {
+    padding: 0;
+}
+
+img.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+/* Content Section */
+.content-section {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    max-width: 1200px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #2F327D;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.section-text {
+    font-size: 18px;
+    color: #696984;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.tag {
+    background-color: #49BBBD1A;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #696984;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tag:hover {
+    background-color: #49BBBD5a;
+}
+
+hr {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Author Section */
+.author-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    max-width: 1200px;
+    width: 100%;
+}
+.cards{
+    overflow-x: hidden !important;
+}
+.author-section .author-info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+ .card-view{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-view a{
+    color: #252641;
+}
+.author-section .author-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+    border-radius: 0 !important;
+}
+
+.author-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.written-by {
+    font-size: 12px;
+    color: #696984;
+}
+
+.author-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.follow-button {
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    width: 232px;
+    height: 49px;
+    border: 1px solid #49BBBD;
+    background-color: white;
+    color: #49BBBD;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.follow-button:hover {
+    background-color: #49BBBD;
+    color: white;
+}
+
+/* Related Blog Section */
+.related-blog {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ebf5ff;;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+
+.section-carousal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 1rem auto;
+    width: 80%;
+}
+
+.section-carousaltitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+}
+
+.see-all {
+    font-size: 18px;
+    font-weight: 700;
+    color: #49BBBD;
+    text-decoration: none;
+}
+
+.blog-carousel {
+    position: relative;
+}
+
+.blog-container {
+    display: flex;
+    overflow: hidden;
+    margin: 1rem auto;
+    max-width: 1200px;
+    width: 80%;
+    gap: 2rem;
+}
+
+.blog-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+}
+
+.blog-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blog-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #252641;
+}
+
+.blog-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+}
+
+.author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 0.3rem;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.blog-description {
+    font-size: 14px;
+    color: #696984;
+    flex-grow: 1;
+}
+
+.blog-namestat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.read-more {
+    font-size: 16px;
+    color: #696984;
+    text-decoration: underline;
+    margin-top: auto;
+}
+
+.blog-stats {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.views-icon {
+    font-size: 20px;
+    font-weight: 900;
+    color: #49BBBD;
+}
+
+.views-count {
+    font-size: 14px;
+    color: #696984;
+}
+
+.navigation-buttons {
+    position: absolute;
+    bottom: -30px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    background-color: #49BBBD80;
+    color: white;
+    border: none;
+    padding: 2px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #49BBBD;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-text {
+        font-size: 18px;
+    }
+
+    .tag {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .author-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .follow-button {
+        font-size: 18px;
+        width: 100px;
+        height: 40px;
+    }
+
+    .related-blog {
+        padding: 15px;
+    }
+
+    .section-carousaltitle {
+        font-size: 20px;
+    }
+
+    .blog-card {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+    }
+
+    .blog-title {
+        font-size: 16px;
+    }
+
+    .blog-description {
+        font-size: 12px;
+    }
+
+    .read-more {
+        font-size: 12px;
+    }
+
+    .views-icon {
+        font-size: 14px;
+    }
+
+    .views-count {
+        font-size: 12px;
+    }
+
+    .nav-button {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    .navigation-buttons {
+        bottom: -30px;
+        right: 5px;
+    }
+}
